@@ -1,7 +1,5 @@
 # TechMaa AI Customer Support Chatbot
 
-![Chatbot Demo](https://i.imgur.com/8f5gZ9L.png)
-
 A lightweight, self-contained, and embeddable customer support chatbot powered by the Google Gemini API. This project provides a floating chat bubble on any website that opens into a clean, modern chat interface, offering instant AI-driven assistance to users.
 
 ---
@@ -79,3 +77,4 @@ The entire logic is contained within the `<script>` tag in the HTML file.
 ### ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
