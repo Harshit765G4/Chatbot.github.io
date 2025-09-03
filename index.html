@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechMaa-AI | Consulting & IT Services</title>
+    <meta
+      name="description"
+      content="TechMaa-AI delivers strategy, technology, and AI-driven transformation services."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Subtle background dot pattern for a more premium feel */
+      .bg-dots {
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+      }
+      /* Custom styles for the Swiper pagination and navigation to match new theme */
+      .swiper-pagination-bullet-active {
+        background-color: #0891b2 !important; /* Tailwind cyan-600 */
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #0891b2 !important; /* Tailwind cyan-600 */
+        transition: transform 0.2s ease-in-out;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        transform: scale(1.1);
+      }
+      logoTechmaa {
+        width: 50px;
+        height: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+    <style>
+      /* Chatbot Styles */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      #chat-window::-webkit-scrollbar {
+        width: 6px;
+      }
+      #chat-window::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      #chat-window::-webkit-scrollbar-thumb {
+        background: #94a3b8;
+        border-radius: 3px;
+      }
+      #chat-window::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+
+      .chat-bubble {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: pop-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+      @keyframes pop-in {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* New styles for bubble and popup animation */
+      #chat-window-popup.hidden {
+        opacity: 0;
+        transform: scale(0.5);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-black text-white shadow-lg sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-2 text-2xl font-bold"
+          aria-label="TechMaa-AI Home"
+        >
+          <img
+            src="assets/img/LOGO2.png"
+            alt="TechMaa-AI Logo"
+            class="w-56 h-auto"
+          />
+        </a>
+
+        <ul class="hidden md:flex items-center space-x-6 text-gray-300">
+          <li>
+            <a href="index.html" class="hover:text-yellow-400 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 transition"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="services.html" class="hover:text-yellow-400 transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="blog.html" class="hover:text-yellow-400 transition"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="testimonials.html" class="hover:text-yellow-400 transition"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a href="insights.html" class="hover:text-yellow-400 transition"
+              >Insights</a
+            >
+          </li>
+          <li>
+            <a href="careers.html" class="hover:text-yellow-400 transition"
+              >Careers</a
+            >
+          </li>
+          <li>
+            <a href="employes.html" class="hover:text-yellow-400 transition"
+              >Team</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="text-yellow-400 hover:text-yellow-300 font-semibold transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden focus:outline-none"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+
+      <div
+        id="mobile-menu-overlay"
+        class="md:hidden fixed inset-0 bg-black bg-opacity-75 z-40 hidden"
+      ></div>
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed top-0 right-0 w-64 h-full bg-gray-900 text-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50"
+      >
+        <div class="p-6 flex justify-end">
+          <button
+            id="close-mobile-menu"
+            class="text-white focus:outline-none"
+            aria-label="Close mobile menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col space-y-4 px-6 text-gray-300">
+          <li>
+            <a
+              href="index.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="testimonials.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="insights.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Insights</a
+            >
+          </li>
+          <li>
+            <a
+              href="careers.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Careers</a
+            >
+          </li>
+          <li>
+            <a
+              href="employes.html"
+              class="block py-2 hover:text-yellow-400 transition"
+              >Team</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block py-2 text-yellow-400 font-semibold"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-white bg-dots">
+        <div
+          class="container mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div class="text-center md:text-left" data-aos="fade-right">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight"
+            >
+              Build what’s next with
+              <span
+                class="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent"
+                id="typed-element"
+              ></span>
+            </h1>
+            <p class="text-lg text-gray-700 mt-6 max-w-xl mx-auto md:mx-0">
+              We partner with enterprises and startups to deliver measurable
+              outcomes through cloud, data, and AI-led transformation.
+            </p>
+            <div
+              class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            >
+              <a
+                href="services.html"
+                class="bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >Explore Services</a
+              >
+              <a
+                href="testimonials.html"
+                class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >See Our Work</a
+              >
+            </div>
+          </div>
+          <div
+            class="flex justify-center"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="AI and cloud technology illustration"
+              class="w-full max-w-md rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+          <h2 class="text-xl font-semibold text-gray-600 mb-8">
+            Trusted by teams across industries
+          </h2>
+          <div
+            class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-gray-500"
+          >
+            <div class="flex items-center gap-3">
+              <i class="fas fa-landmark text-2xl"></i
+              ><span class="font-medium">FinTech</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-graduation-cap text-2xl"></i
+              ><span class="font-medium">EdTech</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-briefcase-medical text-2xl"></i
+              ><span class="font-medium">Healthcare</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-shopping-cart text-2xl"></i
+              ><span class="font-medium">Retail & CPG</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-building-columns text-2xl"></i
+              ><span class="font-medium">Public Sector</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24 bg-white bg-dots">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+              End-to-End Digital Transformation
+            </h2>
+            <p class="text-lg text-gray-700 mt-4">
+              From strategy to execution, we provide the expertise you need to
+              innovate and scale.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="text-3xl text-cyan-500 mb-4">
+                <i class="fas fa-compass"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Strategy & Advisory
+              </h3>
+              <p class="text-gray-600 mb-4">
+                From vision to roadmap—target operating models, AI adoption, and
+                value realization.
+              </p>
+              <a
+                href="services.html"
+                class="font-semibold text-blue-600 hover:text-blue-700 transition"
+                >Learn more →</a
+              >
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="text-3xl text-cyan-500 mb-4">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Engineering & Cloud
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Modernize platforms with microservices, Kubernetes, and
+                serverless on AWS, GCP, and Azure.
+              </p>
+              <a
+                href="services.html"
+                class="font-semibold text-blue-600 hover:text-blue-700 transition"
+                >Learn more →</a
+              >
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="text-3xl text-cyan-500 mb-4">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Data & GenAI
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Data platforms, MLOps, and safe Generative AI copilots tailored
+                to your business.
+              </p>
+              <a
+                href="services.html"
+                class="font-semibold text-blue-600 hover:text-blue-700 transition"
+                >Learn more →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-16 md:py-24 bg-gray-200 text-black"
+        id="outcomes-section"
+      >
+        <div
+          class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div data-aos="fade-right">
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              Outcome-first. Not hype-first.
+            </h2>
+            <p class="text-lg text-gray-900 mt-4">
+              We measure our success by the tangible business outcomes we
+              deliver—revenue lift, cost savings, and risk reduction.
+            </p>
+            <a
+              href="testimonials.html"
+              class="mt-6 inline-block bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              >Browse Client Stories</a
+            >
+          </div>
+          <ul
+            class="space-y-4 text-lg"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i
+              ><span
+                ><span class="font-bold text-2xl" data-count="30">0</span>%
+                average reduction in time-to-market</span
+              >
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i
+              ><span
+                >Up to
+                <span class="font-bold text-2xl" data-count="40">0</span>% cloud
+                spend optimization</span
+              >
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i
+              ><span
+                ><span class="font-bold">Hours to minutes</span> for critical
+                customer workflows</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+              What Our Clients Say
+            </h2>
+            <p class="text-lg text-gray-700 mt-4">
+              We are proud to partner with innovators and industry leaders.
+            </p>
+          </div>
+          <div class="swiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper pb-16">
+              <div class="swiper-slide p-2">
+                <div
+                  class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 h-full flex flex-col"
+                >
+                  <i class="fas fa-quote-left text-cyan-400 text-3xl mb-4"></i>
+                  <blockquote
+                    class="text-lg italic text-gray-700 mb-6 flex-grow"
+                  >
+                    “TechMaa-AI's expertise in cloud architecture transformed
+                    our infrastructure, leading to a 40% reduction in
+                    operational costs. They are true partners in innovation.”
+                  </blockquote>
+                  <footer class="mt-auto">
+                    <div>
+                      <p class="font-bold text-gray-900">Priya Sharma</p>
+                      <p class="text-sm text-gray-600">
+                        CTO, Innovate Solutions
+                      </p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+              <div class="swiper-slide p-2">
+                <div
+                  class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 h-full flex flex-col"
+                >
+                  <i class="fas fa-quote-left text-cyan-400 text-3xl mb-4"></i>
+                  <blockquote
+                    class="text-lg italic text-gray-700 mb-6 flex-grow"
+                  >
+                    “The custom AI model they developed has been a game-changer,
+                    improving our delivery efficiency by 25%. I cannot recommend
+                    them highly enough.”
+                  </blockquote>
+                  <footer class="mt-auto">
+                    <div>
+                      <p class="font-bold text-gray-900">Arjun Singh</p>
+                      <p class="text-sm text-gray-600">
+                        Head of Operations, Global Logistics
+                      </p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+              <div class="swiper-slide p-2">
+                <div
+                  class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 h-full flex flex-col"
+                >
+                  <i class="fas fa-quote-left text-cyan-400 text-3xl mb-4"></i>
+                  <blockquote
+                    class="text-lg italic text-gray-700 mb-6 flex-grow"
+                  >
+                    “Working with TechMaa-AI felt like an extension of our own
+                    team. Their collaborative approach helped us launch a
+                    solution that significantly reduced downtime.”
+                  </blockquote>
+                  <footer class="mt-auto">
+                    <div>
+                      <p class="font-bold text-gray-900">Rohan Mehta</p>
+                      <p class="text-sm text-gray-600">
+                        VP of Engineering, Manufacturing Inc.
+                      </p>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev -left-4"></div>
+          <div class="swiper-button-next -right-4"></div>
+        </div>
+      </section>
+
+      <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+          <div
+            class="bg-cyan-50/50 border border-cyan-100 rounded-2xl p-8 md:p-12 text-center max-w-3xl mx-auto"
+          >
+            <h2 class="text-3xl font-bold text-gray-900">
+              Ready to start building?
+            </h2>
+            <p class="text-lg text-gray-700 mt-4 mb-8">
+              Join our newsletter for the latest insights on AI and digital
+              transformation, delivered to your inbox.
+            </p>
+            <form
+              id="newsletterForm"
+              class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Your work email"
+                required
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:outline-none transition-all duration-200"
+              />
+              <button
+                type="submit"
+                class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p id="newsletterMsg" class="mt-4 text-sm font-medium"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1">
+            <a href="index.html">
+              <img
+                src="assets/img/LOGO2.png"
+                alt="TechMaa-AI Logo"
+                class="w-40 h-auto mb-4"
+              />
+            </a>
+            <p class="text-gray-400 text-sm">
+              Consulting & IT services to help you ship faster—with confidence.
+            </p>
+            <div class="mt-6 flex space-x-5">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="GitHub"
+                class="text-gray-400 hover:text-white transition"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Company</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="careers.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <h5 class="font-bold text-gray-200 mb-4">Resources</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="insights.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Insights</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h5 class="font-bold text-gray-200 mb-4">Get in touch</h5>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@techmaa-ai.com"
+                  class="text-gray-400 hover:text-cyan-400 transition"
+                  >hello@techmaa-ai.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500"
+        >
+          <small
+            >&copy; <span id="year"></span> TechMaa-AI. All rights
+            reserved.</small
+          >
+
+          <p class="text-sm mt-4">
+            Please note: This is a demonstration website created as a generative
+            AI response. The official website for the company referenced is
+            <a
+              href="https://techmaa.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline text-gray-400 hover:text-cyan-500 transition"
+              >TechMaa | Enterprise IT Solutions & Digital Transformation</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="chat-widget-container">
+      <button
+        id="chat-bubble"
+        class="fixed bottom-5 right-5 w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full text-white flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-200 z-50"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-8 h-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          />
+        </svg>
+      </button>
+
+      <div
+        id="chat-window-popup"
+        class="hidden fixed bottom-24 right-5 w-full max-w-lg h-[70vh] max-h-[600px] transform origin-bottom-right transition-all duration-300 z-50"
+      >
+        <div
+          class="flex flex-col w-full h-full bg-white rounded-2xl shadow-2xl"
+          style="font-family: 'Inter', sans-serif"
+        >
+          <header
+            class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-4 rounded-t-2xl flex items-center justify-between shadow-md shrink-0"
+          >
+            <div class="flex items-center">
+              <svg
+                class="w-8 h-8 mr-3 shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <div>
+                <h1 class="text-lg font-bold">TechMaa AI Support</h1>
+                <p class="text-sm text-indigo-200">
+                  Your smart & personalized assistant
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button
+                id="clear-chat-btn"
+                title="Start New Conversation"
+                class="p-2 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <svg
+                  class="w-5 h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.664 0l3.181-3.183m-4.991-2.696a8.25 8.25 0 01-11.664 0l-3.181 3.183"
+                  />
+                </svg>
+              </button>
+              <button
+                id="close-chat-btn"
+                title="Close Chat"
+                class="p-2 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div
+            id="chat-window"
+            class="flex-1 p-6 overflow-y-auto bg-slate-50"
+          ></div>
+
+          <div
+            id="suggestions-area"
+            class="p-4 pt-0 bg-slate-50 border-t border-slate-200"
+          >
+            <div
+              id="suggestions-container"
+              class="flex flex-wrap gap-2 justify-center"
+            ></div>
+          </div>
+
+          <footer
+            class="p-4 bg-white border-t border-gray-200 rounded-b-2xl shrink-0"
+          >
+            <form id="chat-form" class="flex items-center space-x-3">
+              <input
+                type="text"
+                id="message-input"
+                placeholder="Ask a question..."
+                autocomplete="off"
+                class="flex-1 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+              />
+              <button
+                type="submit"
+                id="send-button"
+                class="bg-indigo-600 text-white rounded-full p-3 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-transform duration-200 active:scale-95 disabled:bg-indigo-300 disabled:cursor-not-allowed"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- Library Initializations ---
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        new Typed("#typed-element", {
+          strings: ["AI", "Data", "Cloud-Computing", "Generative AI"],
+          typeSpeed: 80,
+          backSpeed: 50,
+          backDelay: 2000,
+          loop: true,
+          smartBackspace: true,
+        });
+
+        new Swiper(".swiper", {
+          loop: true,
+          autoplay: { delay: 5000, disableOnInteraction: false },
+          pagination: { el: ".swiper-pagination", clickable: true },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesPerView: 1,
+          spaceBetween: 20,
+          breakpoints: { 768: { slidesPerView: 2 } },
+        });
+
+        // --- Intersection Observer for Number Counters ---
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll("[data-count]");
+                counters.forEach((counter) => {
+                  const target = +counter.getAttribute("data-count");
+                  let count = 0;
+                  const speed = 200;
+                  const increment = target / speed;
+                  const updateCount = () => {
+                    if (count < target) {
+                      count += increment;
+                      counter.innerText = Math.ceil(count);
+                      setTimeout(updateCount, 1);
+                    } else {
+                      counter.innerText = target;
+                    }
+                  };
+                  updateCount();
+                });
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        const outcomesSection = document.getElementById("outcomes-section");
+        if (outcomesSection) {
+          observer.observe(outcomesSection);
+        }
+
+        // --- Header Scroll Effect ---
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 10) {
+            header.classList.add("bg-opacity-90");
+          } else {
+            header.classList.remove("bg-opacity-90");
+          }
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeMobileMenuButton =
+          document.getElementById("close-mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuOverlay = document.getElementById(
+          "mobile-menu-overlay"
+        );
+
+        const toggleMobileMenu = () => {
+          const isOpen = mobileMenu.classList.contains("translate-x-full");
+          mobileMenu.classList.toggle("translate-x-full", !isOpen);
+          mobileMenuOverlay.classList.toggle("hidden", !isOpen);
+          document.body.classList.toggle("overflow-hidden", isOpen);
+          mobileMenuButton.setAttribute("aria-expanded", isOpen);
+        };
+
+        mobileMenuButton.addEventListener("click", toggleMobileMenu);
+        if (closeMobileMenuButton)
+          closeMobileMenuButton.addEventListener("click", toggleMobileMenu);
+        mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+
+        // --- Set Current Year in Footer ---
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // --- UPDATED Newsletter Form Submission Logic ---
+        const newsletterForm = document.getElementById("newsletterForm");
+        const newsletterMsg = document.getElementById("newsletterMsg");
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            const emailInput = newsletterForm.querySelector(
+              'input[name="email"]'
+            );
+            const email = emailInput.value;
+
+            // Clear previous messages
+            newsletterMsg.textContent = "";
+            newsletterMsg.classList.remove("text-green-600", "text-red-600");
+
+            try {
+              // Send the data to your backend API
+              const response = await fetch("http://localhost:3000/subscribe", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: email }),
+              });
+
+              const data = await response.json();
+
+              if (response.ok) {
+                // Success
+                newsletterMsg.textContent = data.message;
+                newsletterMsg.classList.add("text-green-600");
+                newsletterForm.reset();
+              } else {
+                // Error from server (e.g., duplicate email)
+                newsletterMsg.textContent = data.message;
+                newsletterMsg.classList.add("text-red-600");
+              }
+            } catch (error) {
+              // Network or other errors
+              console.error("Submission error:", error);
+              newsletterMsg.textContent =
+                "Could not connect to the server. Please try again.";
+              newsletterMsg.classList.add("text-red-600");
+            }
+
+            // Make the message disappear after a while
+            setTimeout(() => {
+              newsletterMsg.textContent = "";
+              newsletterMsg.classList.remove("text-green-600", "text-red-600");
+            }, 5000);
+          });
+        }
+      });
+    </script>
+
+    <!-- Start of Tawk.to Script-->
+    <!-- <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/68a8b295ce17d419321e5cba/1j39fj6h8";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script> -->
+    <!--End of Tawk.to Script -->
+
+    <!-- <script>
+      // --- CHAT BUBBLE & WINDOW TOGGLE LOGIC ---
+      const chatBubble = document.getElementById("chat-bubble");
+      const chatPopup = document.getElementById("chat-window-popup");
+      const closeChatBtn = document.getElementById("close-chat-btn");
+      const messageInput = document.getElementById("message-input");
+
+      chatBubble.addEventListener("click", () => {
+        chatPopup.classList.toggle("hidden");
+        if (!chatPopup.classList.contains("hidden")) {
+          setTimeout(() => messageInput.focus(), 100); // Focus input when opened
+        }
+      });
+
+      closeChatBtn.addEventListener("click", () => {
+        chatPopup.classList.add("hidden");
+      });
+
+      // --- YOUR EXISTING CHATBOT LOGIC (slightly modified) ---
+      const chatWindow = document.getElementById("chat-window");
+      const chatForm = document.getElementById("chat-form");
+      const sendButton = document.getElementById("send-button");
+      const suggestionsArea = document.getElementById("suggestions-area");
+      const suggestionsContainer = document.getElementById(
+        "suggestions-container"
+      );
+
+      let chatHistory = [];
+      const systemPrompt = `You are a friendly, helpful, and expert AI customer support assistant for "TechMaa AI Innovation Pvt Ltd". Your goal is to provide smart, fast, and personalized replies to customer queries. - **Intent Recognition**: Deeply understand what the customer is asking. - **Contextual Understanding**: Remember previous parts of the conversation. - **Sentiment Analysis**: Detect the user's emotion and tailor your tone to be empathetic. - **Persona**: Be professional, patient, and knowledgeable. Always represent TechMaa AI Innovation Pvt Ltd positively. Start the conversation by greeting the user and asking how you can help.`;
+
+      function addMessage(sender, message) {
+        const messageWrapper = document.createElement("div");
+        messageWrapper.classList.add(
+          "chat-bubble",
+          "flex",
+          "items-end",
+          "gap-2",
+          "mb-4"
+        );
+
+        const time = new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        let messageContent;
+        if (sender === "user") {
+          messageWrapper.classList.add("justify-end");
+          messageContent = `
+                <div class="order-1 max-w-xs md:max-w-md">
+                    <div class="px-4 py-2 rounded-2xl bg-indigo-600 text-white rounded-br-lg">${message}</div>
+                    <div class="text-xs text-gray-500 mt-1 text-right">${time}</div>
+                </div>`;
+        } else {
+          messageWrapper.classList.add("justify-start");
+          message = message.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Basic markdown for bold
+          messageContent = `
+                <div class="order-2 max-w-xs md:max-w-md">
+                    <div class="px-4 py-2 rounded-2xl bg-white text-gray-800 rounded-bl-lg shadow-sm">${message}</div>
+                    <div class="text-xs text-gray-500 mt-1">${time}</div>
+                </div>
+                <div class="order-1">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-indigo-700">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M12 3v1.5m0 16.5V21m3.75-18v1.5m0 16.5V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H8.25a2.25 2.25 0 00-2.25 2.25v10.5a2.25 2.25 0 002.25 2.25z" /></svg>
+                    </div>
+                </div>`;
+        }
+
+        messageWrapper.innerHTML = messageContent;
+        chatWindow.appendChild(messageWrapper);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function showTypingIndicator() {
+        const typingElement = document.createElement("div");
+        typingElement.id = "typing-indicator";
+        typingElement.classList.add(
+          "chat-bubble",
+          "flex",
+          "items-end",
+          "gap-2",
+          "mb-4"
+        );
+        typingElement.innerHTML = `<div class="order-2"><div class="px-4 py-2 rounded-2xl bg-white text-gray-800 rounded-bl-lg shadow-sm flex items-center space-x-1"><div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0s;"></div><div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div><div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div></div></div><div class="order-1"><div class="w-8 h-8 rounded-full bg-slate-200"></div></div>`;
+        chatWindow.appendChild(typingElement);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const typingIndicator = document.getElementById("typing-indicator");
+        if (typingIndicator) {
+          typingIndicator.remove();
+        }
+      }
+
+      async function getAIResponse(prompt) {
+        suggestionsArea.style.display = "none";
+        showTypingIndicator();
+        sendButton.disabled = true;
+        messageInput.disabled = true;
+        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+        // IMPORTANT: Replace with your actual Gemini API key
+        const apiKey = "AIzaSyAGpj408KuSSs9ZMR0wYkknYXzpEbKj8SA";
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+
+        const payload = {
+          contents: chatHistory,
+          systemInstruction: { parts: [{ text: systemPrompt }] },
+          generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
+        };
+
+        try {
+          const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          if (!response.ok) {
+            throw new Error(`API request failed: ${response.status}`);
+          }
+          const result = await response.json();
+          const botResponse = result.candidates[0].content.parts[0].text;
+          chatHistory.push({ role: "model", parts: [{ text: botResponse }] });
+          removeTypingIndicator();
+          addMessage("bot", botResponse);
+        } catch (error) {
+          console.error("Error fetching AI response:", error);
+          removeTypingIndicator();
+          addMessage(
+            "bot",
+            "I seem to be having trouble connecting. Please check your API key or connection."
+          );
+        } finally {
+          sendButton.disabled = false;
+          messageInput.disabled = false;
+          messageInput.focus();
+        }
+      }
+
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userMessage = messageInput.value.trim();
+        if (userMessage) {
+          addMessage("user", userMessage);
+          getAIResponse(userMessage);
+          messageInput.value = "";
+        }
+      });
+
+      function handleSuggestionClick(e) {
+        const question = e.target.innerText;
+        addMessage("user", question);
+        getAIResponse(question);
+      }
+
+      function initializeChat() {
+        chatWindow.innerHTML = "";
+        chatHistory = [];
+
+        const welcomeMessage =
+          "Hello! I'm the AI assistant for TechMaa AI Innovation. How can I help you today?";
+        chatHistory.push({ role: "model", parts: [{ text: welcomeMessage }] });
+        setTimeout(() => addMessage("bot", welcomeMessage), 500);
+
+        suggestionsContainer.innerHTML = "";
+        const suggestions = [
+          "What services do you offer?",
+          "Tell me about your pricing.",
+          "How can I contact support?",
+        ];
+        suggestions.forEach((q) => {
+          const button = document.createElement("button");
+          button.innerText = q;
+          button.classList.add(
+            "px-3",
+            "py-1",
+            "bg-white",
+            "text-indigo-600",
+            "text-sm",
+            "font-medium",
+            "rounded-full",
+            "border",
+            "border-indigo-200",
+            "hover:bg-indigo-50",
+            "transition-colors"
+          );
+          button.addEventListener("click", handleSuggestionClick);
+          suggestionsContainer.appendChild(button);
+        });
+        suggestionsArea.style.display = "block";
+      }
+
+      // Initialize the chat when the page loads
+      window.addEventListener("load", initializeChat);
+    </script> -->
+
+    <script>
+      // --- ELEMENT SELECTORS ---
+      const chatBubble = document.getElementById("chat-bubble");
+      const chatPopup = document.getElementById("chat-window-popup");
+      const closeChatBtn = document.getElementById("close-chat-btn");
+      const clearChatBtn = document.getElementById("clear-chat-btn");
+      const chatWindow = document.getElementById("chat-window");
+      const chatForm = document.getElementById("chat-form");
+      const messageInput = document.getElementById("message-input");
+      const sendButton = document.getElementById("send-button");
+      const suggestionsArea = document.getElementById("suggestions-area");
+      const suggestionsContainer = document.getElementById(
+        "suggestions-container"
+      );
+
+      // --- BUBBLE & WINDOW LOGIC ---
+      chatBubble.addEventListener("click", () => {
+        chatPopup.classList.toggle("hidden");
+        if (!chatPopup.classList.contains("hidden")) {
+          setTimeout(() => messageInput.focus(), 100);
+        }
+      });
+
+      closeChatBtn.addEventListener("click", () => {
+        chatPopup.classList.add("hidden");
+      });
+
+      // --- CORE CHATBOT LOGIC ---
+      let chatHistory = [];
+      const systemPrompt = `You are a friendly, helpful, and expert AI customer support assistant for "TechMaa AI Innovation Pvt Ltd". Your goal is to provide smart, fast, and personalized replies to customer queries.
+- **Intent Recognition**: Deeply understand what the customer is asking.
+- **Contextual Understanding**: Remember previous parts of the conversation.
+- **Sentiment Analysis**: Detect the user's emotion and tailor your tone to be empathetic.
+- **Persona**: Be professional, patient, and knowledgeable. Always represent TechMaa AI Innovation Pvt Ltd positively. Start the conversation by greeting the user and asking how you can help.
+- **Formatting**: Use markdown like **bold** for emphasis and bullet points for lists to make information clear and easy to read.`;
+
+      function addMessage(sender, message) {
+        const messageWrapper = document.createElement("div");
+        messageWrapper.classList.add(
+          "chat-bubble",
+          "flex",
+          "items-end",
+          "gap-2",
+          "mb-4"
+        );
+        const time = new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        // Sanitize message to prevent HTML injection
+        const sanitizedMessage = message
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+
+        let messageContent;
+        if (sender === "user") {
+          messageWrapper.classList.add("justify-end");
+          messageContent = `
+                <div class="order-1 max-w-xs md:max-w-md">
+                    <div class="px-4 py-2 rounded-2xl bg-indigo-600 text-white rounded-br-lg">${sanitizedMessage}</div>
+                    <div class="text-xs text-gray-500 mt-1 text-right">${time}</div>
+                </div>`;
+        } else {
+          // Bot message
+          messageWrapper.classList.add("justify-start");
+          // Basic markdown for bold and lists
+          let formattedMessage = sanitizedMessage.replace(
+            /\*\*(.*?)\*\*/g,
+            "<strong>$1</strong>"
+          );
+          formattedMessage = formattedMessage.replace(/(\r\n|\n|\r)/g, "<br>"); // Keep line breaks
+          formattedMessage = formattedMessage.replace(
+            /(\*|\-)\s/g,
+            '</li><li class="list-disc ml-4">'
+          );
+          if (formattedMessage.includes("</li>")) {
+            formattedMessage =
+              '<ul><li class="list-disc ml-4">' +
+              formattedMessage.substring(
+                formattedMessage.indexOf("</li>") + 5
+              ) +
+              "</li></ul>";
+          }
+
+          messageContent = `
+                <div class="order-2 max-w-xs md:max-w-md">
+                    <div class="px-4 py-2 rounded-2xl bg-white text-gray-800 rounded-bl-lg shadow-sm">${formattedMessage}</div>
+                    <div class="text-xs text-gray-500 mt-1">${time}</div>
+                </div>
+                <div class="order-1">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-indigo-700">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M12 3v1.5m0 16.5V21m3.75-18v1.5m0 16.5V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H8.25a2.25 2.25 0 00-2.25 2.25v10.5a2.25 2.25 0 002.25 2.25z" /></svg>
+                    </div>
+                </div>`;
+        }
+        messageWrapper.innerHTML = messageContent;
+        chatWindow.appendChild(messageWrapper);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function showTypingIndicator() {
+        const typingElement = document.createElement("div");
+        typingElement.id = "typing-indicator";
+        typingElement.classList.add(
+          "chat-bubble",
+          "flex",
+          "items-end",
+          "gap-2",
+          "mb-4"
+        );
+        typingElement.innerHTML = `<div class="order-2"><div class="px-4 py-2 rounded-2xl bg-white text-gray-800 rounded-bl-lg shadow-sm flex items-center space-x-1"><div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0s;"></div><div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div><div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div></div></div><div class="order-1"><div class="w-8 h-8 rounded-full bg-slate-200"></div></div>`;
+        chatWindow.appendChild(typingElement);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const typingIndicator = document.getElementById("typing-indicator");
+        if (typingIndicator) typingIndicator.remove();
+      }
+
+      async function getAIResponse(prompt) {
+        suggestionsArea.style.display = "none";
+        showTypingIndicator();
+        sendButton.disabled = true;
+        messageInput.disabled = true;
+        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+        const apiKey = "AIzaSyAGpj408KuSSs9ZMR0wYkknYXzpEbKj8SA"; // IMPORTANT: Use your actual API key here!
+        // **FIXED**: Using the recommended stable model for better performance and reliability.
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+
+        const payload = {
+          contents: chatHistory,
+          systemInstruction: { parts: [{ text: systemPrompt }] },
+          generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
+        };
+
+        try {
+          const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          if (!response.ok)
+            throw new Error(`API request failed: ${response.status}`);
+          const result = await response.json();
+          const botResponse = result.candidates[0].content.parts[0].text;
+          chatHistory.push({ role: "model", parts: [{ text: botResponse }] });
+          removeTypingIndicator();
+          addMessage("bot", botResponse);
+        } catch (error) {
+          console.error("Error fetching AI response:", error);
+          removeTypingIndicator();
+          addMessage(
+            "bot",
+            "I seem to be having trouble connecting. Please check your API key or connection and try again."
+          );
+        } finally {
+          sendButton.disabled = false;
+          messageInput.disabled = false;
+          messageInput.focus();
+        }
+      }
+
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userMessage = messageInput.value.trim();
+        if (userMessage) {
+          addMessage("user", userMessage);
+          getAIResponse(userMessage);
+          messageInput.value = "";
+        }
+      });
+
+      function handleSuggestionClick(e) {
+        const question = e.target.innerText;
+        addMessage("user", question);
+        getAIResponse(question);
+      }
+
+      function initializeChat() {
+        chatWindow.innerHTML = "";
+        chatHistory = [];
+        const welcomeMessage =
+          "Hello! I'm the AI assistant for TechMaa AI Innovation. How can I help you today?";
+        chatHistory.push({ role: "model", parts: [{ text: welcomeMessage }] });
+        setTimeout(() => addMessage("bot", welcomeMessage), 300);
+
+        suggestionsContainer.innerHTML = "";
+        const suggestions = [
+          "What services do you offer?",
+          "Tell me about your pricing.",
+          "How can I contact support?",
+        ];
+        suggestions.forEach((q) => {
+          const button = document.createElement("button");
+          button.innerText = q;
+          button.classList.add(
+            "px-3",
+            "py-1",
+            "bg-white",
+            "text-indigo-600",
+            "text-sm",
+            "font-medium",
+            "rounded-full",
+            "border",
+            "border-indigo-200",
+            "hover:bg-indigo-50",
+            "transition-colors"
+          );
+          button.addEventListener("click", handleSuggestionClick);
+          suggestionsContainer.appendChild(button);
+        });
+        suggestionsArea.style.display = "block";
+      }
+
+      // --- EVENT LISTENERS ---
+      clearChatBtn.addEventListener("click", initializeChat);
+      window.addEventListener("load", initializeChat);
+    </script>
+  </body>
+</html>
